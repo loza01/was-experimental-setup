@@ -8,7 +8,19 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res) {
-  res.render('pages/index')
+  res.render('pages/welcome-page')
+});
+
+app.post('/instructions', function(req, res) {
+  res.render('pages/instructions')
+});
+
+app.post('/privacy', function(req, res) {
+  res.render('pages/privacy')
+});
+
+app.post('/questions', function(req, res) {
+  res.render('pages/questions')
 });
 
 app.listen(PORT, function() {
