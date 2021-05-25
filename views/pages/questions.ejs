@@ -15,53 +15,646 @@
 
   <form action="/submit" method="post"></form>
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <!-- Question 1-->
-        <section>
-          <h4><strong>1. To which gender do you most identify?</strong></h4>
-          <div class="radio">
-            <label>
-              <input type="radio" name="optionsRadios" id="optionsRadios1" value="1_female" checked>
-              Female
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="optionsRadios" id="optionsRadios1" value="1_male">
-              Male
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="optionsRadios" id="optionsRadios1" value="1_other">
-              Others
-            </label>
-          </div>
-        </section>
+      <div class="col-sm-6 col-sm-offset-3">
+        <div class="group-1">
+          <!-- Question 1-->
+          <section>
+            <h4><strong>1. To which gender do you most identify?</strong></h4>
+            <div class="radio">
+              <label>
+                <input type="radio" name="1_1" id="optionsRadios1" value="female" checked>
+                Female
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="1_2" id="optionsRadios1" value="male">
+                Male
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="1_3" id="optionsRadios1" value="other">
+                Others
+              </label>
+            </div>
+          </section>
 
-        <!-- Question 2-->
-        <section>
-          <h4><strong>8. What is your preference about museums?</strong></h4>
-          <p><strong>8.1 I am interested in history</strong></p>
+          <!-- Question 2 -->
+          <section>
+            <h4><strong>2. What is your age?</strong></h4>
+            <div class="radio">
+              <label>
+                <input type="radio" name="2_1" id="optionsRadios1" value="12-17" checked>
+                12 - 17 years old
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="2_2" id="optionsRadios1" value="18-24">
+                18 - 24 years old
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="2_3" id="optionsRadios1" value="25-34">
+                25 - 34 years old
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="2_4" id="optionsRadios1" value="35-44">
+                35 - 44 years old
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="2_5" id="optionsRadios1" value="45-54">
+                45 - 54 years old
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="2_6" id="optionsRadios1" value="55-64">
+                55 - 64 years old
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="2_7" id="optionsRadios1" value="65+">
+                65+ years old
+              </label>
+            </div>
+          </section>
+
+          <!-- Question 3 -->
+          <section>
+            <h4><strong>3. Please, choose your nationality</strong></h4>
+          </section>
+
+          <!-- Question 4 -->
+          <section>
+            <h4><strong>4. Have you ever been to this museum exhibit?</strong></h4>
+            <h5>This experience is based on an exhibition in the Museum of the History of Barcelona (MUHBA).
+              Have you ever visited it?</h5>
+            <div class="radio">
+              <label>
+                <input type="radio" name="4_1" id="optionsRadios1" value="yes" checked>
+                yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="4_2" id="optionsRadios1" value="no">
+                no
+              </label>
+            </div>
+          </section>
+
+          <!-- Question 5 -->
+          <section>
+            <h4><strong>5. Have you ever been to an interactive museum?</strong></h4>
+            <h5>A Museum with interactive exhibits let their visitors engage with the items and activities on display
+              or interact with the contents. Instead of just simply reading the information posted, visitors are
+              able to participate actively through hands-on experience.</h5>
+            <div class="radio">
+              <label>
+                <input type="radio" name="5_1" id="optionsRadios1" value="yes" checked>
+                yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="5_2" id="optionsRadios1" value="no">
+                no
+              </label>
+            </div>
+          </section>
+
+          <!-- Question 6 -->
+          <section>
+            <h4><strong>6. If you had been in an interactive museum, What kind of supportive material you used to
+              interact with the content of the Musume?</strong></h4>
+          </section>
+
+          <!-- Question 7 -->
+          <section>
+            <h4><strong>7.Have you been a participant in a study that used a similar device?</strong></h4>
+            <div class="radio">
+              <label>
+                <input type="radio" name="7_1" id="optionsRadios1" value="yes" checked>
+                yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="7_2" id="optionsRadios1" value="no">
+                no
+              </label>
+            </div>
+          </section>
+        </div>
+
+        <div class="group-2">
+          <!-- Question 8 -->
+          <section>
+            <h4><strong>8. What is your preference about museums?</strong></h4>
+            <p><strong>8.1 I am interested in history</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="8_1" id="inlineRadio1" value="1"> 1 <span>Interested at all</span>
+              </label>
+              <label>
+                <input type="radio" name="8_2" id="inlineRadio2" value="2"> 2 <span>Somewhat interested</span>
+              </label>
+              <label>
+                <input type="radio" name="8_3" id="inlineRadio3" value="3"> 3 <span>Fairly interested</span>
+              </label>
+              <label>
+                <input type="radio" name="8_4" id="inlineRadio2" value="4"> 4 <span>Very interested</span>
+              </label>
+              <label>
+                <input type="radio" name="8_5" id="inlineRadio3" value="5"> 5 <span>Hardly interested</span>
+              </label>
+            </div>
+            <p><strong>8.2 I am interested in archaelogy</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="9_1" id="inlineRadio1" value="1"> 1 <span>Interested at all</span>
+              </label>
+              <label>
+                <input type="radio" name="9_2" id="inlineRadio2" value="2"> 2 <span>Somewhat interested</span>
+              </label>
+              <label>
+                <input type="radio" name="9_3" id="inlineRadio3" value="3"> 3 <span>Fairly interested</span>
+              </label>
+              <label>
+                <input type="radio" name="9_4" id="inlineRadio2" value="4"> 4 <span>Very interested</span>
+              </label>
+              <label>
+                <input type="radio" name="9_5" id="inlineRadio3" value="5"> 5 <span>Hardly interested</span>
+              </label>
+            </div>
+            <p><strong>8.3 When I go to museums or other cultural heritage sites, I like to have a tour guide.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="10_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="10_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="10_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="10_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="10_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+            <p><strong>8.4 When I go to museums or other cultural heritage sites, I would like to interact using different devices..</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="11_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="11_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="11_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="11_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="11_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+          </section>
+
+          <!-- Question 9 -->
+          <section>
+            <h4><strong>9. During your visit to Barcino, you held a special device that let you see into the past.</strong></h4>
+            <p><strong>9.1 I liked exploring the Barcino ruins with a device that let me see augmented content from the past.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="12_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="12_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="12_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="12_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="12_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+            <p><strong>9.2 I like the idea of using this kind of device that adds augmented imagery to a historical site during a visit.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="13_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="13_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="13_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="13_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="13_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+            <p><strong>9.3 I would like to try using the technology in visits to other heritage sites or museums.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="14_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="14_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="14_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="14_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="14_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+            <p><strong>9.4 The device was a useful mechanism to help me look for augmented objects.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="15_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="15_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="15_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="15_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="15_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+            <p><strong>9.5 I could easily move the device to explore the full size of the augmented objects found.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="16_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="16_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="16_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="16_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="16_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+            <p><strong>9.6 I found natural the interaction between the augmented content and the environment.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="17_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="17_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="17_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="17_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="17_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+            <p><strong>9.7 I found the idea of holding a device to be adequate in the exploration activities.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="18_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="18_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="18_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="18_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="18_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+          </section>
+        </div>
+        <div class="group-3">
+          <section>
+            <p><strong>9.8 Holding this kind of device distract me not to focus on the museum.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="19_1" id="inlineRadio1" value="1"> 1 <span>Interested at all</span>
+              </label>
+              <label>
+                <input type="radio" name="19_2" id="inlineRadio2" value="2"> 2 <span>Somewhat interested</span>
+              </label>
+              <label>
+                <input type="radio" name="19_3" id="inlineRadio3" value="3"> 3 <span>Fairly interested</span>
+              </label>
+              <label>
+                <input type="radio" name="19_4" id="inlineRadio2" value="4"> 4 <span>Very interested</span>
+              </label>
+              <label>
+                <input type="radio" name="19_5" id="inlineRadio3" value="5"> 5 <span>Hardly interested</span>
+              </label>
+            </div>
+            <p><strong>9.9 When using this device I felt present in the mix of the physical environment, digital objects
+              and characters.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="20_1" id="inlineRadio1" value="1"> 1 <span>Interested at all</span>
+              </label>
+              <label>
+                <input type="radio" name="20_2" id="inlineRadio2" value="2"> 2 <span>Somewhat interested</span>
+              </label>
+              <label>
+                <input type="radio" name="20_3" id="inlineRadio3" value="3"> 3 <span>Fairly interested</span>
+              </label>
+              <label>
+                <input type="radio" name="20_4" id="inlineRadio2" value="4"> 4 <span>Very interested</span>
+              </label>
+              <label>
+                <input type="radio" name="20_5" id="inlineRadio3" value="5"> 5 <span>Hardly interested</span>
+              </label>
+            </div>
+            <p><strong>9.10 As a device holder, I was able to visit without distraction.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="21_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="21_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="21_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="21_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="21_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+            <p><strong>9.11 How was you emotion as device holder?</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="22_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="22_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="22_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="22_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="22_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+            <p><strong>9.12 I like exploring the remains of Barcino using the device.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="23_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="23_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="23_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="23_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="23_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+            <p><strong>9.13 I like how the device augments the physical space with the digital content.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="24_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="24_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="24_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="24_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="24_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+            <p><strong>9.14 I had fun during the augmented reality visit.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="25_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="25_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="25_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="25_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="25_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+            <p><strong>9.15 I believe the visit create a sociable experience.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="26_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="26_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="26_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="26_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="26_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+            <p><strong>9.16 I would recommend the device for educational and tourism purpose.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="27_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="27_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="27_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="27_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="27_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+            <p><strong>9.17 It was easy to use the device.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="28_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="28_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="28_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="28_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="28_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+            <p><strong>9.18 Fulling the remaining ancient artifact with digital content added value to my visit.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="29_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="29_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="29_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="29_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="29_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+            <p><strong>9.19 If I were in a group of five visitors, where we all hold our own device,
+              I would feel connected to the others.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="30_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="30_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="30_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="30_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="30_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+            <p><strong>9.20 If I were in a group of five visitors, with only one of the other visitors in my group holding the device,
+              I would feel left out of the experience.</strong></p>
+            <div class="col5">
+              <label>
+                <input type="radio" name="31_1" id="inlineRadio1" value="1"> 1 <span>Strongly disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="31_2" id="inlineRadio2" value="2"> 2 <span>Disagree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="31_3" id="inlineRadio3" value="3"> 3 <span>Neither agree nor disagree</span>
+              </label>
+              <label>
+                <input type="radio" name="31_4" id="inlineRadio2" value="4"> 4 <span>Agree somewhat</span>
+              </label>
+              <label>
+                <input type="radio" name="31_5" id="inlineRadio3" value="5"> 5 <span>Strongly agree</span>
+              </label>
+            </div>
+            <p><strong>9.21 Do you think the time of your experience during the visit using the device
+              was short or sufficent?</strong></p>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="32_1" id="optionsRadios1" value="short time" checked>
+                  It was a short time
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="32_2" id="optionsRadios1" value="sufficient time">
+                  It was a sufficient time
+                </label>
+              </div>
+          </section>
+        </div>
+        <div class="group-4">
+          <p><strong>9.8 Holding this kind of device distract me not to focus on the museum.</strong></p>
           <div class="col5">
             <label>
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1 <span>interested at all</span>
+              <input type="radio" name="19_1" id="inlineRadio1" value="1"> 1 <span>Interested at all</span>
             </label>
             <label>
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2 <span>Somewhat interested</span>
+              <input type="radio" name="19_2" id="inlineRadio2" value="2"> 2 <span>Somewhat interested</span>
             </label>
             <label>
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3 <span>Fairly interested</span>
+              <input type="radio" name="19_3" id="inlineRadio3" value="3"> 3 <span>Fairly interested</span>
             </label>
             <label>
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 4 <span>Very interested</span>
+              <input type="radio" name="19_4" id="inlineRadio2" value="4"> 4 <span>Very interested</span>
             </label>
             <label>
-              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 5 <span>Hardly interested</span>
+              <input type="radio" name="19_5" id="inlineRadio3" value="5"> 5 <span>Hardly interested</span>
             </label>
           </div>
-        </section>
-        <button class="btn btn-primary btn-lg" href="#" role="button">Next</button>
+
+          <p><strong>9.21 Do you think the time of your experience during the visit using the device
+            was short or sufficent?</strong></p>
+            <div class="radio">
+              <label>
+                <input type="radio" name="32_1" id="optionsRadios1" value="short time" checked>
+                It was a short time
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="32_2" id="optionsRadios1" value="sufficient time">
+                It was a sufficient time
+              </label>
+            </div>
+        </div>
+        <button id="submit-questions" class="btn btn-primary btn-lg" href="#" role="button">Next</button>
       </div>
     </div>
   </form>

@@ -45,3 +45,7 @@ label {
 label span {
     display: block;
 }
+
+.btn {
+    margin-bottom: 50px;
+}
