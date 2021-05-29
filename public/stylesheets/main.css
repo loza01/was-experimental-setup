@@ -59,6 +59,7 @@ label {
 
 label span {
     display: block;
+    font-size: 11px;
 }
 
 @media(max-width: 768px) {
@@ -88,4 +89,12 @@ body {
         padding: 5%;
         margin: 0 30px 0 30px;
     }
+}
+
+.note {
+    font-size: 13px;
+    margin-top: 15px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: #E7ECFE;
 }

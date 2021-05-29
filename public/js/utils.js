@@ -1,5 +1,9 @@
 
 
+const checkbox_limit = 3;
+var checkbox1_counter = 0;
+var checkbox2_counter = 0;
+
 document.addEventListener("DOMContentLoaded", function() {
     var group1 = document.querySelector(".group-1");
     var group2 = document.querySelector(".group-2");
@@ -14,6 +18,36 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.querySelector("#submit-questions").addEventListener("click", handleSubmitData);
     document.querySelector("#submit-questions-real").style.display = "none";
+
+    var checkBoxGroup1 = document.querySelectorAll(".single-checkbox");
+    for (check of checkBoxGroup1) {
+        check.addEventListener('change', function(evt) {
+            if (this.checked == true) {
+                checkbox1_counter++;
+            } else {
+                checkbox1_counter--;
+            }
+            if (checkbox1_counter > checkbox_limit) {
+                this.checked = false;
+                checkbox1_counter--;
+            }
+        });
+    }
+
+    var checkBoxGroup2 = document.querySelectorAll(".single-checkbox2");
+    for (check of checkBoxGroup2) {
+        check.addEventListener('change', function(evt) {
+            if (this.checked == true) {
+                checkbox2_counter++;
+            } else {
+                checkbox2_counter--;
+            }
+            if (checkbox2_counter > checkbox_limit) {
+                this.checked = false;
+                checkbox2_counter--;
+            }
+        });
+    }
 });
 
 function handleSubmitData() {
