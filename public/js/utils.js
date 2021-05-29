@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     group4.style.display = "none";
 
     document.querySelector("#submit-questions").addEventListener("click", handleSubmitData);
+    document.querySelector("#submit-questions-real").style.display = "none";
 });
 
 function handleSubmitData() {
@@ -30,8 +31,10 @@ function handleSubmitData() {
     } else if (group3.style.display === "block") {
         group3.style.display = "none";
         group4.style.display = "block";
-        document.querySelector("#submit-questions").innerHTML = "Submit";
+        document.querySelector("#submit-questions").style.display = "none";
+        document.querySelector("#submit-questions-real").style.display = "block";
     } else if (group4.style.display === "block") {
-        // Submit
+        group1.style.display = "block";
+        group4.style.display = "none";
     }
 }

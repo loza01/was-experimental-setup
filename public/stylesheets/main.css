@@ -21,8 +21,14 @@
 }
 
 .navbar img {
-    height: 60px;
+    height: 45px;
     padding-left: 5px;
+}
+
+@media(max-width: 768px) {
+    .navbar img {
+        height: 35px;
+    }
 }
 
 section {
@@ -32,7 +38,16 @@ section {
 .col5 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    position: relative;
 }
+
+/*.col5::before {
+    content: '';
+    border-bottom: 1px solid lightgrey;
+    position: absolute;
+    width: 100%;
+    top: 10px;
+}*/
 
 .col5 label {
     text-align: center;
@@ -46,6 +61,31 @@ label span {
     display: block;
 }
 
+@media(max-width: 768px) {
+    label span {
+        font-size: 11px;
+    }
+}
+
 .btn {
     margin-bottom: 50px;
+}
+
+body {
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.col-sm-6.col-sm-offset-3 {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+@media(max-width: 768px) {
+    .col-sm-6.col-sm-offset-3 {
+        padding: 5%;
+        margin: 0 30px 0 30px;
+    }
 }
