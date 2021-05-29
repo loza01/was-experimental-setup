@@ -17,7 +17,14 @@ app.get('/', function(req, res) {
 });
 
 app.post('/instructions', function(req, res) {
-  res.render('pages/instructions')
+  var accept = req.body["accept"];
+  var reject = req.body["reject"];
+
+  if (reject == "0") {
+    res.redirect("/");
+  } else {
+    res.render('pages/instructions');
+  }
 });
 
 app.post('/privacy', function(req, res) {

@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%- include ("../partials/header.ejs") %>
+<%- include ("../partials/header.ejs") %>
 </head>
 
 <body class="home">
-  <%- include ("../partials/nav.ejs") %>
+<%- include ("../partials/nav.ejs") %>
   <div class="jumbotron">
-    <form action="/privacy" method="post">
-      <div class="text-center">
-        <h1 class="display-4">Welcome to the WaS Experimental Setup!</h1>
-        <p class="lead">Bla bla bla</p>
-        <button class="btn btn-primary btn-lg" href="#" role="button">Start!</button>
-      </div>
-    </form>
-  </div>
-</body>
+  <form action="/privacy" method="post">
+    <div class="text-center">
+      <h1 class="display-4">Welcome to the WaS experimental analysis!</h1>
+      <div class="body-content">
+        <p class="lead">First I would like to thank you for taking your time to participate in this scientific experimental questionnaire.
+        This study is being done by the Full-Body Interaction Lab as part of a masters’ thesis in Cognitive Systems and Interactive Media 
+        at the Universitat Pompeu Fabra.</p>			
+        <p class="lead">The scientific research held in the Full-Body Interaction Lab suggests an analysis based on a User study on the benefits of the World
+          as Support Augmented Reality paradigm in the heritage site of Barcino. The study is to analyse and identify the benefit of user 
+          study using this new paradigm related to Augmented Reality, called: World as Support Augmented Reality. This proposes different
+          interaction approaches and so we aim to identify their overall impact. </p>
+          
+          <p class="lead">As a participant, you were exploring the museum content in a group of participants in two conditions</p>
+          
+          <p class="lead"> Condition One: You perceived the augmented content with the help of a “Magic Lantern”, a World-as-Support based device While you 
+            were the device holder.</p>
+            
+            <p class="lead">Condition Two: You perceived the augmented content with your group of partner as a partner of the device holder
+              
+              your participation in this research study is valuable, and we are grateful for your time. Please by clicking the Next button read 
+              and accept our policy. </p>
+            </p>
+          </div>
+          <button class="btn btn-primary btn-lg" href="#" role="button">Next</button>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
+      

@@ -98,3 +98,13 @@ body {
     padding-bottom: 1px;
     background-color: #E7ECFE;
 }
+
+.body-content {
+    padding: 2% 6%;
+    text-align: justify;
+}
+
+.list-group {
+    text-align: left;
+    margin-left: 12%;
+}
