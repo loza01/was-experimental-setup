@@ -50,7 +50,7 @@ app.listen(PORT, function() {
 });
 
 // If modifying these scopes, delete token.json.
-const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
+const SCOPES = 'https://www.googleapis.com/auth/spreadsheets';
 const TOKEN_PATH = 'token.json';
 
 function parseData(data) {
@@ -81,59 +81,23 @@ function uploadDataToSpreadSheet(data) {
  * @param {Object} credentials The authorization client credentials.
  * @param {function} callback The callback to call with the authorized client.
  */
-function authorize(credentials, callback, data) {
-  const client_secret = credentials["web"]["client_secret"];
-  const client_id = credentials["web"]["client_id"];
-  const redirect_uris = credentials["web"]["redirect_uris"];
+async function authorize(credentials, callback, data) {
+  const auth = new google.auth.GoogleAuth({
+    keyFile: "credentials.json",
+    scopes: SCOPES
+  });
 
-  const oAuth2Client = new google.auth.OAuth2(
-      client_id, client_secret, redirect_uris[0]);
+  const client = await auth.getClient();
 
-  // Check if we have previously stored a token.
-  fs.readFile(TOKEN_PATH, (err, token) => {
-    if (err) return getNewToken(oAuth2Client, callback);
-    oAuth2Client.setCredentials(JSON.parse(token));
-    callback(oAuth2Client, data);
-  });
-}
-
-/**
- * Get and store new token after prompting for user authorization, and then
- * execute the given callback with the authorized OAuth2 client.
- * @param {google.auth.OAuth2} oAuth2Client The OAuth2 client to get token for.
- * @param {getEventsCallback} callback The callback for the authorized client.
- */
-function getNewToken(oAuth2Client, callback) {
-  const authUrl = oAuth2Client.generateAuthUrl({
-    access_type: 'offline',
-    scope: SCOPES,
-  });
-  console.log('Authorize this app by visiting this url:', authUrl);
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-  });
-  rl.question('Enter the code from that page here: ', (code) => {
-    rl.close();
-    oAuth2Client.getToken(code, (err, token) => {
-      if (err) return console.error('Error while trying to retrieve access token', err);
-      oAuth2Client.setCredentials(token);
-      // Store the token to disk for later program executions
-      fs.writeFile(TOKEN_PATH, JSON.stringify(token), (err) => {
-        if (err) return console.error(err);
-        console.log('Token stored to', TOKEN_PATH);
-      });
-      callback(oAuth2Client);
-    });
-  });
+  const googleSheets = google.sheets({version: "v4", auth: client});
+  callback(googleSheets, data);
 }
 
 /**
  * Lists the names and IDs of up to 10 files.
  * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
  */
-function appendToFile(auth, data) {
-  const sheets = google.sheets({version: 'v4', auth});
+function appendToFile(sheets, data) {
   const spreadsheetId = "17rj-vZ-4-sETwwhC6aT7kTiQlaJo50qa22SUz2Kjj6Y";
   const range = "A:AN";
   const valueInputOption = "RAW";
