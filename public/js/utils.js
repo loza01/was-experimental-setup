@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("#submit-questions").addEventListener("click", handleSubmitData);
     document.querySelector("#submit-questions-real").style.display = "none";
 
-    var checkBoxGroup1 = document.querySelectorAll(".single-checkbox");
+    /* var checkBoxGroup1 = document.querySelectorAll(".single-checkbox");
     for (check of checkBoxGroup1) {
         check.addEventListener('change', function(evt) {
             if (this.checked == true) {
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 checkbox2_counter--;
             }
         });
-    }
+    } */
 });
 
 function handleSubmitData() {
