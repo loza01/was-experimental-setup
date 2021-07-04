@@ -114,3 +114,42 @@ body {
     font-size: 21px;
     font-weight: 200;
 }
+
+.flag-language-brit {
+    width: 58px;
+    height: 30px;
+    background: url(../img/british_flag.png) no-repeat;
+    display: inline-block;
+    background-size: contain;
+}
+
+.flag-language-spa {
+    width: 46px;
+    height: 31px;
+    background: url(../img/spanish_flag.png) no-repeat;
+    display: inline-block;
+    background-size: contain;
+}
+
+.flag-language-cat {
+    width: 46px;
+    height: 32px;
+    background: url(../img/catalan_flag.png) no-repeat;
+    display: inline-block;
+    background-size: contain;
+}
+
+.flag-language-brit:hover {
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.flag-language-spa:hover {
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.flag-language-cat:hover {
+    border: 1px solid black;
+    border-radius: 2px;
+}
