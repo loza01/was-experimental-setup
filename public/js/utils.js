@@ -1,5 +1,4 @@
 
-
 const checkbox_limit = 3;
 var checkbox1_counter = 0;
 var checkbox2_counter = 0;
@@ -542,6 +541,8 @@ var instructions_spa = [
                             "Loza Tadesse, Paul Hine, Narcis Pares, Universidad Pompeu Fabra – UPF-WaS 2021-2022"
                         ];
 
+var currentLanguage = "english";
+
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelector(".flag-language-brit").addEventListener("click", handleChangeLanguageBritish);
     document.querySelector(".flag-language-spa").addEventListener("click", handleChangeLanguageSpanish);
@@ -566,9 +567,9 @@ document.addEventListener("DOMContentLoaded", function() {
     if (next4 != null) {
         current_page = 3;
     }
-    /*if (next3 != null) {
-        next1.addEventListener("click", increasePage);
-    }*/
+
+    currentLanguage = document.querySelector("#language-id").innerHTML;
+    checkLanguage(currentLanguage);
 
     var group1 = document.querySelector(".group-1");
     var group2 = document.querySelector(".group-2");
@@ -582,49 +583,28 @@ document.addEventListener("DOMContentLoaded", function() {
     group4.style.display = "none";
 
     document.querySelector("#submit-questions").addEventListener("click", handleSubmitData);
+    document.querySelector("#submit-questions-real").addEventListener("click", handleSubmitData);
     document.querySelector("#submit-questions-real").style.display = "none";
-
-    /* var checkBoxGroup1 = document.querySelectorAll(".single-checkbox");
-    for (check of checkBoxGroup1) {
-        check.addEventListener('change', function(evt) {
-            if (this.checked == true) {
-                checkbox1_counter++;
-            } else {
-                checkbox1_counter--;
-            }
-            if (checkbox1_counter > checkbox_limit) {
-                this.checked = false;
-                checkbox1_counter--;
-            }
-        });
-    }
-
-    var checkBoxGroup2 = document.querySelectorAll(".single-checkbox2");
-    for (check of checkBoxGroup2) {
-        check.addEventListener('change', function(evt) {
-            if (this.checked == true) {
-                checkbox2_counter++;
-            } else {
-                checkbox2_counter--;
-            }
-            if (checkbox2_counter > checkbox_limit) {
-                this.checked = false;
-                checkbox2_counter--;
-            }
-        });
-    } */
 });
+
+function checkLanguage() {
+    if (currentLanguage === "english") {
+        changeLanguage("english");
+    } else if (currentLanguage === "spanish") {
+        changeLanguage("spanish");
+    }
+}
 
 function handleChangeLanguageBritish() {
     changeLanguage("british");
+    document.querySelector("#language-id").innerHTML = "english";
+    currentLanguage = "english";
 }
 
 function handleChangeLanguageSpanish() {
     changeLanguage("spanish");
-}
-
-function handleChangeLanguageCatalan() {
-    changeLanguage("catalan");
+    document.querySelector("#language-id").innerHTML = "spanish";
+    currentLanguage = "spanish";
 }
 
 function changeLanguage(language) {
@@ -638,8 +618,6 @@ function changeLanguage(language) {
             elements.push(sentence);
         }
     }
-
-    console.log(elements);
 
     if (language == "british") {
 
@@ -683,11 +661,91 @@ function changeLanguage(language) {
     }
 }
 
+function countRadioChecked(elements) {
+    var count = 0;
+
+    for (radioElement of elements) {
+        if (radioElement.checked) {
+            count++;
+        }
+    }
+    return count - 1;
+}
+
+function checkCheckBoxLastQuestion(elements) {
+    var counts = []
+    counts.push(0);
+    counts.push(0);
+    counts.push(0);
+
+    for (element of elements) {
+        var checkBox = element.firstElementChild.firstElementChild;
+
+        if (checkBox.name == "33") {
+            if (checkBox.checked) {
+                counts[0]++;
+            }
+        } else if (checkBox.name == "34") {
+            if (checkBox.checked) {
+                counts[1]++;
+            }
+        } else if (checkBox.name == "35") {
+            if (checkBox.checked) {
+                counts[2]++;
+            }
+        }
+    }
+
+    if (counts[0] == 0 || counts[1] == 0 || counts[2] == 0) {
+        return false;
+    }
+    return true;
+}
+
+function checkIfAnswered() {
+    var group1 = document.querySelector(".group-1");
+    var group2 = document.querySelector(".group-2");
+    var group3 = document.querySelector(".group-3");
+    var group4 = document.querySelector(".group-4");
+
+    var radioButtons = document.querySelectorAll('input[type="radio"]');
+    var minimumChecks = 0;
+
+    if (group1.style.display === "block") {
+        minimumChecks = 5;
+    } else if (group2.style.display === "block") {
+        minimumChecks = 16;
+    } else if (group3.style.display === "block") {
+        minimumChecks = 29;
+    } else if (group4.style.display === "block") {
+        var checkBoxElements = group4.getElementsByClassName("checkbox");
+        if (!checkCheckBoxLastQuestion(checkBoxElements)) {
+            return false;
+        }
+        minimumChecks = 35;
+    }
+
+    if (countRadioChecked(radioButtons) !== minimumChecks) {
+        return false;
+    }
+
+    return true;
+}
+
 function handleSubmitData() {
     var group1 = document.querySelector(".group-1");
     var group2 = document.querySelector(".group-2");
     var group3 = document.querySelector(".group-3");
     var group4 = document.querySelector(".group-4");
+
+    var checkLastGroup = document.querySelector("#l-257");
+    checkLanguage();
+
+    if (checkIfAnswered() != true) {
+        alert("Please, answer all the questions!");
+        checkLastGroup.value = "NotCorrect";
+        return;
+    }
 
     if (group1.style.display === "block") {
         group1.style.display = "none";
@@ -701,7 +759,6 @@ function handleSubmitData() {
         document.querySelector("#submit-questions").style.display = "none";
         document.querySelector("#submit-questions-real").style.display = "block";
     } else if (group4.style.display === "block") {
-        group1.style.display = "block";
-        group4.style.display = "none";
+        checkLastGroup.value = "Correct";
     }
 }

@@ -7,13 +7,14 @@ const readline = require('readline');
 const {google} = require('googleapis');
 
 const app = express();
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({extended:true}));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res) {
-  res.render('pages/welcome-page')
+  res.render('pages/welcome-page');
 });
 
 app.post('/instructions', function(req, res) {
@@ -37,7 +38,15 @@ app.post('/questions', function(req, res) {
 
 app.post('/submit', function(req, res) {
   var data = req.body;
+  var preProcessedData = Object.entries(data);
   var parsedData = [];
+
+  for (d of preProcessedData) {
+    console.log(d[1]);
+    if (d[1] == "NotCorrect") {
+      return;
+    }
+  }
 
   parsedData = parseData(data);
 

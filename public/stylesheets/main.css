@@ -116,25 +116,17 @@ body {
 }
 
 .flag-language-brit {
-    width: 58px;
-    height: 30px;
+    width: 42px;
+    height: 23px;
     background: url(../img/british_flag.png) no-repeat;
     display: inline-block;
     background-size: contain;
 }
 
 .flag-language-spa {
-    width: 46px;
-    height: 31px;
+    width: 42px;
+    height: 25px;
     background: url(../img/spanish_flag.png) no-repeat;
-    display: inline-block;
-    background-size: contain;
-}
-
-.flag-language-cat {
-    width: 46px;
-    height: 32px;
-    background: url(../img/catalan_flag.png) no-repeat;
     display: inline-block;
     background-size: contain;
 }
